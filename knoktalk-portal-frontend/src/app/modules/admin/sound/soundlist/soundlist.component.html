@@ -1,0 +1,39 @@
+<!-- 
+File Name :-soundlist.component.html	   	Created Date :-31-08-2020     Created By :- Vikash Kumar (Emp. Id : VTPL/BLR/005)
+	
+Description :- This Component is Used to Display the All Sound List			
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+<div class="text-right">
+  <button type="button" class="btn btn-danger add-btn" (click)="routeToUploadSound()">Add Sound File</button>
+</div>
+<div class="container">
+  <div class="container-fluid mx-auto">
+    <div class="row d-flex">
+      <div class="col-lg-3 col-md-6 col-sm-12 mt-2" *ngFor="let list of soundList">
+        <div class="card">
+          <div class="card-horizontal">
+            <div class="img-square-wrapper">
+              <img class="img" src="assets/img/music.png" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <p class="card-head" *ngIf="list.soundName == null; else elseBlock">Original Sound</p>
+              <ng-template #elseBlock>
+                <p class="card-head">{{list.soundName}}</p>
+              </ng-template>
+              <small>
+                <mat-icon color="warn" class="delete-icon" matTooltip="Delete" [matTooltipPosition]="'right'"
+                  matTooltipHideDelay="500" (click)="routeToDeleteSound(list)">delete_forever</mat-icon>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

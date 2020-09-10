@@ -1,0 +1,29 @@
+<!-- 
+  File Name :- AllVideos.html	            Created Date :-29-08-2020           Created By :- Rambabu (Emp. Id : VTPL/BLR/0013)			
+
+  Description :- This component is responsible to add video in particular discovery section
+
+===============================================================================================================================
+  Sl.No			    Description			                          Modified By		    	                        Modified Date	
+===============================================================================================================================
+
+-->
+
+
+<mat-icon matSuffix style="float: right; cursor: pointer;" (click)='close()'>clear</mat-icon>
+<h4 mat-dialog-title class="dialog-title">Add Discovery Section</h4>
+<form [formGroup]="addDiscoverSectionForm" class="form-group" (submit)="addDiscoverSectionToVideoDetails()">
+  <div>
+    <mat-form-field class="login-full-width">
+      <mat-label>Add Into Discovery</mat-label>
+      <select matNativeControl required formControlName="discoverSectionBean">
+        <option value="null">Select Hare</option>
+        <option *ngFor="let list of discoverList" [ngValue]="list">{{list.sectionName}}</option>
+      </select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button class="btn btn-sm btn-danger btn-block text-uppercase" type="submit"
+      [disabled]='addDiscoverSectionForm.invalid'>Submit</button>
+  </div>
+</form>

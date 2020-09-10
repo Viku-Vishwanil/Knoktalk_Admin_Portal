@@ -1,0 +1,118 @@
+<!-- 
+  File Name :- AllVideos.html	            Created Date :-28-08-2020           Created By :- Rambabu (Emp. Id : VTPL/BLR/0013)			
+
+  Description :- This component is responsible to search the rewards and to display rewards list
+
+===============================================================================================================================
+  Sl.No			    Description			                          Modified By		    	                        Modified Date	
+===============================================================================================================================
+
+-->
+<div class="container-fluid mt-3 p-0">
+    <div class="card shadow">
+        <div class="card-title">
+            <h4 class="text-center main-bg pt-3 mt-1">- Rewards Report -</h4>
+        </div>
+        <mat-divider class="mx-5"></mat-divider>
+        <form action="" class="form-group customhover" [formGroup]="rewardsReportForm">
+            <!-- <h6 class="text-center main-bg pt-3 mt-1">Total Appointment Issued</h6> -->
+
+            <div class="row d-flex justify-content-around mt-4 ml-5 mr-5 w-100">
+                <div class="col-lg-6 col-sm-12 col-md-6 mx-auto">
+                    <mat-form-field class="field-full-width">
+                        <mat-label>From Date</mat-label>
+                        <input matInput type="date" placeholder="Ex. 7/7/1995" value="" color="primary"
+                            formControlName="fromDate" />
+                    </mat-form-field>
+                    <!-- <p style="color: red;"
+                        *ngIf="appointmentReportForm.get('fromDate') && appointmentReportForm.get('fromDate').touched && appointmentReportForm.get('fromDate').invalid">
+                        Please enter this field</p> -->
+                </div>
+
+                <div class="col-lg-6 col-sm-12 col-md-6 mx-auto">
+                    <mat-form-field class="field-full-width">
+                        <mat-label>To Date</mat-label>
+                        <input matInput type="date" placeholder="Ex. 7/8/2020" value="" color="primary"
+                            formControlName="toDate" />
+                    </mat-form-field>
+                    <!-- <p style="color: red;"
+                        *ngIf="appointmentReportForm.get('toDate') && appointmentReportForm.get('toDate').touched && appointmentReportForm.get('toDate').invalid">
+                        Please enter this field</p> -->
+                </div>
+                <br>
+
+            </div>
+
+            <div class="row mt-4 ml-5 mr-5 ">
+
+                <div class="col text-center">
+                    <button mat-raised-button color="primary" class="shadow" color="primary">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <br>
+    <h4 class="text-center main-bg pt-3 mt-1">- Rewards Report list -</h4>
+    <br>
+    <table id="paginationSimpleNumbers" class="display text-center" style="width:100%">
+        <thead class="orange">
+            <tr>
+                <th class="th-sm">ID
+                </th>
+
+                <th class="th-sm">Name
+                </th>
+                <th class="th-sm">Gifts
+                </th>
+                <th class="th-sm">Coins
+                </th>
+
+                <th class="th-sm">Likes
+                </th>
+
+                <th class="th-sm">Follow
+                </th>
+
+                <!-- <th class="th-sm">Action
+			</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>diya</td>
+                <td>12</td>
+                <td>10</td>
+                <td>15</td>
+                <td>20</td>
+                <!-- <td>
+				<mat-icon color="accent" class="edit-btn" title="Edit">edit</mat-icon>
+				<mat-icon color="warn" class="delete-btn" title="Delete">delete_forever</mat-icon>
+			</td> -->
+            </tr>
+
+        </tbody>
+        <tfoot class="orange">
+            <tr>
+                <th class="th-sm">ID
+                </th>
+
+                <th class="th-sm">Name
+                </th>
+                <th class="th-sm">Gifts
+                </th>
+                <th class="th-sm">Coins
+                </th>
+
+                <th class="th-sm">Likes
+                </th>
+
+                <th class="th-sm">Follow
+                </th>
+                <!-- <th class="th-sm">Action
+			</th> -->
+            </tr>
+        </tfoot>
+    </table>
+</div>

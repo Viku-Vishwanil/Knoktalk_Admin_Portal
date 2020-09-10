@@ -1,0 +1,40 @@
+<!-- 
+File Name :-addsound.component.html	   	Created Date :-03-09-2020     Created By :- Vikash Kumar (Emp. Id : VTPL/BLR/005)
+	
+Description :- This Component is Used to Display the Sound Upload Form		
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+<form [formGroup]="addSound" class="form-group">
+  <div class="container" appDnd (fileDropped)="onFileDropped($event)">
+    <input type="file" formControlName="fileUpload" #fileDropRef id="fileDropRef" multiple
+      (change)="fileBrowseHandler($event.target.files)" accept="audio/aac">
+    <img src="assets/img/dnd/ic-upload-file.svg" alt="">
+    <h3>Drag and drop file here</h3>
+    <h3>or</h3>
+    <label for="fileDropRef">Upload Sound (.AAC)</label>
+  </div>
+  <div class="files-list">
+    <div class="single-file" *ngFor="let file of files; let i = index">
+      <img src="assets/img/dnd/ic-file.svg" width="45px" alt="file">
+      <div class="info">
+        <h4 class="name">
+          {{ file?.name }}
+        </h4>
+        <p class="size">
+          {{ formatBytes(file?.size) }}
+        </p>
+        <app-progress [progress]="file?.progress"></app-progress>
+      </div>
+      <img src="assets/img/dnd/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i)">
+    </div>
+    <h6 style="text-align: center;">
+      <strong>Note: &nbsp;</strong>Convert MP3 File into AAC and then Upload<br>
+      <a href="https://convertio.co/mp3-aac/" target="_blank">Convert MP3 to AAC</a>
+    </h6>
+  </div>
+</form>

@@ -1,0 +1,45 @@
+<!-- 
+File Name :-sectionlist.component.html	   	Created Date :-01-09-2020     Created By :- Vikash Kumar (Emp. Id : VTPL/BLR/005)
+	
+Description :- This Component is Used to Display the All Section List			
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+<div class="text-right">
+	<button type="button" class="btn btn-danger add-btn" (click)="openDialog()">Add Section</button>
+</div>
+<table id="sectionDetails" #sectionDetails class="display text-center" style="width:100%">
+	<thead class="orange">
+		<tr>
+			<th>ID</th>
+			<th>Section Name</th>
+			<th>Created</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let list of sectionList ; let i = index;">
+			<td>{{i+1}}</td>
+			<td>{{list.sectionName}}</td>
+			<td>{{list.createdDate}}</td>
+			<td>
+				<mat-icon color="accent" class="edit-btn" matTooltip="Edit" [matTooltipPosition]="'below'"
+					matTooltipHideDelay="500" (click)="openEditDialog(list)">edit</mat-icon>
+				<mat-icon color="warn" class="delete-btn" matTooltip="Delete" [matTooltipPosition]="'below'"
+					matTooltipHideDelay="500" (click)="routeToDeleteSection(list)">delete_forever</mat-icon>
+			</td>
+		</tr>
+	</tbody>
+	<tfoot class="orange">
+		<tr>
+			<th>ID</th>
+			<th>Section Name</th>
+			<th>Created</th>
+			<th>Action</th>
+		</tr>
+	</tfoot>
+</table>

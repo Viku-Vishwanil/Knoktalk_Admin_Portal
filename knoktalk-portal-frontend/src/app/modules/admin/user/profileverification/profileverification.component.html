@@ -1,0 +1,74 @@
+<!-- 
+File Name :-profileverification.component.html	   	Created Date :-31-08-2020     Created By :- Faiser I (Emp. Id : VTPL/BLR/006)
+	
+Description :- this component is used to approve or decline the users					
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+
+<h3 class="green">ALL Verification Request</h3>
+<table id="paginationSimpleNumbers" class="display text-center" style="width:100%">
+    <thead class="orange">
+        <tr>
+            <th class="th-sm">Sl No
+            </th>
+            <th class="th-sm">KnokTalk ID
+            <th class="th-sm">First Name
+            </th>
+            <th class="th-sm">Last Name
+            </th>
+            <th class="th-sm">Attachment
+            </th>
+            <th class="th-sm">Created Date
+            </th>
+            <th class="th-sm">Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let verification of verificationList ; let i = index;"
+            [style.color]="isApproved(verification.user.verified) ? 'green' : 'red'">
+            <td>{{i+1}}</td>
+            <td>{{verification.user.knoktalkId}}</td>
+            <td>{{verification.user.firstName}}</td>
+            <td>{{verification.user.lastName}}</td>
+            <td>
+                <img src="assets/img/user.png" alt="" style="max-width: 5rem;">
+                <!-- <img [src]="placeholder_path" alt="" width="150px" height="180px" class="p-1  profile-holder"
+                (click)="photoUpload.click()" />
+              <input type="file" name="photoUpload" accept="image/*" id="photoUpload" #photoUpload
+                (change)="getPhotoFile(photoUpload, $event)" hidden /> -->
+            </td>
+            <td>{{verification.createdDate}}</td>
+            <td class="text-center">
+                <mat-icon color='accent' matTooltip="Approve" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="edit-btn" (click)='approveUser(verification)' *ngIf="verification.user.verified==0">
+                    check_circle</mat-icon>
+                <mat-icon color='warn' matTooltip="Decline" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="edit-btn" (click)='declineUser(verification)' *ngIf="verification.user.verified==1">cancel
+                </mat-icon>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot class="orange">
+        <tr>
+            <th class="th-sm">Sl No
+            </th>
+            <th class="th-sm">KnokTalk ID
+            <th class="th-sm">First Name
+            </th>
+            <th class="th-sm">Last Name
+            </th>
+            <th class="th-sm">Attachment
+            </th>
+            <th class="th-sm">Created Date
+            </th>
+            <th class="th-sm">Action
+            </th>
+        </tr>
+    </tfoot>
+</table>

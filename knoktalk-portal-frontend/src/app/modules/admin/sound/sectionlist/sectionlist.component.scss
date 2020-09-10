@@ -1,0 +1,41 @@
+ /* For Dialog box starts*/
+ .dialog-title{
+  color: var(--main-bg-3-color);
+  text-align: center;
+ }
+ .cross{
+   float: right;
+   cursor: pointer;
+ }
+ .dialog-text{
+   color: var(--main-bg-1-color);
+ }
+ .login-full-width {
+  color: var(--main-bg-3-color);
+  width: 100%;
+}
+ /* For Dialog box ends*/
+
+.add-btn{
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  .edit-btn{
+    cursor: pointer;
+    font-size:20px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: -25px;
+  }
+  .delete-btn{
+    cursor: pointer;
+    font-size:20px;
+    text-align: center;
+    margin-top: -25px;
+  }
+
+  .orange{
+    color: var(--main-font-3-color);
+  }

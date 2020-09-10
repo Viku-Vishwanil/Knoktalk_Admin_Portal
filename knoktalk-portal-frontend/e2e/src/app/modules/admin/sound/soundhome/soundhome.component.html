@@ -1,0 +1,40 @@
+<!-- 
+File Name :-soundhome.component.html	   	Created Date :-27-08-2020     Created By :- Vikash Kumar (Emp. Id : VTPL/BLR/005)
+	
+Description :- This Component is Used to Display the Nav Bar(All Sounds,All Sections,Sound Gallery)				
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+<div class="container-fluid">
+  <div class="card shadow">
+    <div class="card-title">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="navbar-brand menu" mat-list-item routerLinkActive="list-item-active"
+                routerLink="/home/soundshome/sounds">AllSound </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand menu" mat-list-item routerLinkActive="list-item-active"
+                routerLink="/home/soundshome/sections">All Sections </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand menu" mat-list-item routerLinkActive="list-item-active"
+                routerLink="/home/soundshome/soundGallery">Sound Gallery </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- <mat-divider class="w-100"></mat-divider> -->
+    <div class="card-body text-dark ">
+      <!-- <app-soundlist></app-soundlist> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

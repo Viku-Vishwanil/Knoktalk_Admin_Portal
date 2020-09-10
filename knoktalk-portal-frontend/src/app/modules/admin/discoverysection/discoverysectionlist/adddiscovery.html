@@ -1,0 +1,36 @@
+<!-- 
+  File Name :- AllVideos.html	            Created Date :-28-08-2020           Created By :- Rambabu (Emp. Id : VTPL/BLR/0013)			
+
+  Description :- This component is responsible to create discovery section
+
+===============================================================================================================================
+  Sl.No			    Description			                          Modified By		    	                        Modified Date	
+===============================================================================================================================
+
+-->
+
+<mat-icon matSuffix style="float: right; cursor: pointer;" (click)='close()'>clear</mat-icon>
+<h4 mat-dialog-title class="dialog-title">Add Discovery Section</h4>
+<form [formGroup]="addDiscoverSectionForm" class="form-group" (submit)="saveDiscoversectionDetails()">
+  <div>
+    <mat-form-field class="login-full-width">
+      <mat-label>Discovery Section Name <mat-hint class="text-danger">*</mat-hint>
+      </mat-label>
+      <input matInput type="text" formControlName="sectionName" [errorStateMatcher]="matcher">
+
+      <mat-error *ngIf="addDiscoverSectionForm.get('sectionName').hasError('required')">
+        Section name is required
+      </mat-error>
+      <mat-error *ngIf="addDiscoverSectionForm.get('sectionName').hasError('pattern')">
+        Section name should be alphanumeric
+      </mat-error>
+      <mat-error *ngIf="addDiscoverSectionForm.get('sectionName').hasError('DuplicateUserName')">
+        Section name already registered, try a different one
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button class="btn btn-sm btn-danger btn-block text-uppercase" type="submit"
+      [disabled]='addDiscoverSectionForm.invalid'>Submit</button>
+  </div>
+</form>

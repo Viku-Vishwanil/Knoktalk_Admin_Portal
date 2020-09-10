@@ -1,0 +1,66 @@
+/* For Dialog box starts*/
+.dialog-title{
+  color: var(--main-bg-3-color);
+  text-align: center;
+ }
+ .cross{
+   float: right;
+   cursor: pointer;
+ }
+ .dialog-text{
+   color: var(--main-bg-1-color);
+ }
+ .login-full-width {
+  color: var(--main-bg-3-color);
+  width: 100%;
+}
+ /* For Dialog box ends*/
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+  }
+  .img{
+    margin-top: 30px;
+    margin-left: 95px;
+    height: 30px;
+    width: 30px;
+    //background-color: rgb(156, 154, 154);
+  }
+  
+  .card{
+    height: 100px;
+    width: 220px;
+    max-width: 400px;
+    border: 1px solid rgb(156, 154, 154);
+    //background: -webkit-linear-gradient(top,rgba(255,143,28,1),rgba(255,255,255,1), rgba(80,158,47,1));  
+    // background-color: rgb(221, 216, 216);
+  }
+  .card-head{
+    margin-top: -20px;
+    margin-left: -120px;
+    text-align: center;
+  }
+  
+  .publish-icon{
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: -130px;
+    margin-top: 28px;
+    float: left;
+  }
+
+  .delete-icon{
+    cursor: pointer;
+    font-size: 20px;
+    // margin-left: -140px;
+    margin-top: 28px;
+    float: right;
+  }
+
+  .upload-file-btn {
+    border-radius: 50px;
+    color: white;
+    border: none;
+    background-color: #d9534f;
+  }
+

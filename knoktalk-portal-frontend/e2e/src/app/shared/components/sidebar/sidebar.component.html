@@ -1,0 +1,50 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <img src="assets/img/knoktalk/admin.png" alt="{{ currentUserAvatar }}" class="my-3" />
+    <div class="header">
+      <h5>{{currentUserName}}</h5>
+      <h6>{{currentUserName}}@knoktalk.com</h6>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+  <h2 matSubheader>Pages</h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="">
+    <mat-icon color='primary'>dvr</mat-icon>Dashboard
+  </a>
+
+  <!-- Faiser Sidebar starts here -->
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/listusers">
+    <mat-icon color='primary'>group</mat-icon>All Users
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/profileverification">
+    <mat-icon color='primary'>verified_user</mat-icon>Profile Verification
+  </a>
+  <!-- Faiser Sidebar ends here -->
+
+  <!-- Vikash Sidebar starts here -->
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/soundshome/sounds">
+    <mat-icon color='primary'>library_music</mat-icon>All Sounds
+  </a>
+
+  <!-- Vikash Sidebar ends here -->
+
+
+  <!-- Rambabu Sidebar starts here -->
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/allvideos">
+    <mat-icon color="primary">video_library</mat-icon>All Videos
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/discoverysectionlist">
+    <mat-icon color="primary">list</mat-icon>Discovery Section
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/home/reports">
+    <mat-icon color="primary">chrome_reader_mode</mat-icon>Reports
+  </a>
+  <!-- Rambabu Sidebar ends here -->
+</mat-nav-list>

@@ -1,0 +1,103 @@
+<!-- 
+File Name :-dashboard.component.html	   	Created Date :-08-09-2020     Created By :- Faiser I (Emp. Id : VTPL/BLR/006)
+	
+Description :- this is the first component which appears after login, 					
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+
+
+<div class="container-fluid">
+  <div class="container mt-5 mb-5">
+    <h1 class=" text-center txt onLoad-text">Welcome To KnokTalk Admin Portal</h1>
+  </div>
+
+  <div class="dashboard">
+    <!-- Counts Tiles Starts -->
+    <div class="row d-flex justify-content-around">
+      <div class="col-lg-2 col-md-4 col-sm-5 col-xs-4 mb-3 mr-2">
+        <div class="card tiles" (click)='routeToUsers()'>
+          <div class="card-body">
+            <h6 class="card-title title">Users</h6>
+            <p class="count " id="value">
+              <ng2-odometer [number]="usersCount" [config]="{ }"></ng2-odometer>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-5 col-xs-4 mb-3 mr-2">
+        <div class="card tiles" (click)='routeToSounds()'>
+          <div class="card-body">
+            <h6 class="card-title title">Sounds</h6>
+            <p class="count " id="value">
+              <ng2-odometer [number]="soundsCount" [config]="{ }"></ng2-odometer>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-5 mb-3 mr-2">
+        <div class="card tiles" (click)='routeToVerification()'>
+          <div class="card-body">
+            <h6 class="card-title title">Verification Requests</h6>
+            <p class="count " id="value">
+              <ng2-odometer [number]="verificationCount" [config]="{ }"></ng2-odometer>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-5 mb-3 mr-2">
+        <div class="card tiles" (click)='routeToVideos()'>
+          <div class="card-body">
+            <h6 class="card-title title">Videos</h6>
+            <p class="count " id="value">
+              <ng2-odometer [number]="videosCount" [config]="{ }"></ng2-odometer>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-around">
+      <div class="col-lg-2 col-md-4 col-sm-5 col-xs-4 mb-3 mr-2">
+        <div class=" ">
+          <div class="card-body">
+            <img src="assets/img/knoktalk/butterfly.gif" width="192" height="170" />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-5 mb-3 mr-2">
+        <div class="card tiles" (click)="routeToReports()">
+          <div class="card-body">
+            <h6 class="card-title title"> Report</h6>
+            <p class="count " id="value">
+              <mat-icon class="icon">chrome_reader_mode</mat-icon>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-5 mb-3 mr-2">
+        <div class="card tiles" (click)="routeToDiscoverySection()">
+          <div class="card-body">
+            <h6 class="card-title title">Discovery Section</h6>
+            <p class="count " id="value">
+              <mat-icon class="icon">chrome_reader_mode</mat-icon>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-4 col-sm-5 mb-3 mr-2">
+        <div class=" ">
+          <div class="card-body">
+            <img src="assets/img/knoktalk/butterfly.gif" width="192" height="170" />
+          </div>
+        </div>
+      </div>
+      <!-- Counts Tiles Ends -->
+    </div>
+
+    <router-outlet></router-outlet>

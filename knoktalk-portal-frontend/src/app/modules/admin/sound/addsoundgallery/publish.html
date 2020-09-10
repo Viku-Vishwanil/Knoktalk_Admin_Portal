@@ -1,0 +1,36 @@
+<mat-icon matSuffix class="cross" (click)='close()'>clear</mat-icon>
+<h5 mat-dialog-title class="dialog-title">Publish Sound</h5>
+<form [formGroup]="publishSound" class="form-group">
+<div mat-dialog-content>
+    <p class="dialog-text"></p>
+    <mat-form-field class="login-full-width">
+        <mat-label>Sound Name </mat-label>
+        <input matInput type="text" formControlName="soundName">
+    </mat-form-field>
+    <mat-form-field class="login-full-width">
+        <mat-label>Description </mat-label>
+        <input matInput type="text" formControlName="description">
+    </mat-form-field>
+    <mat-form-field class="login-full-width">
+        <mat-label>Select Sound Section </mat-label>
+        <select matNativeControl name="" id="" formControlName="sectionBean">
+            <option value="null" disabled>Select Sound Section</option>
+                <option *ngFor="let list of sectionList" [ngValue]="list">{{list.sectionName}}</option>
+        </select>
+    </mat-form-field>
+    <mat-form-field floatPlaceholder="never" class="login-full-width">
+        <input [hidden]="true" (change)="onFileSelect($event)" type="file" accept="all/*" #fileSelect >
+        <input readonly matInput [(ngModel)]="filename" placeholder="Select file..." formControlName="thumbline"/>
+        <button *ngIf="this.base64File" (click)="this.base64File = null; this.filename = null" matSuffix matTooltip="Remove selected file"
+                [matTooltipPosition]="'above'" type="button" color="warn" class="upload-file-btn" mat-icon-button>
+                <mat-icon>close</mat-icon>
+              </button>
+        <button matSuffix mat-icon-button (click)="fileSelect.click();"  matTooltip="Select a file" [matTooltipPosition]="'above'" class="upload-file-btn">
+          <mat-icon>file_upload</mat-icon>
+        </button> 
+      </mat-form-field>
+<div mat-dialog-actions>
+    <button class="btn btn-sm btn-danger btn-block text-uppercase"  type="submit" (click)="savePublishSound()">Submit</button>
+</div>
+</div>
+</form>

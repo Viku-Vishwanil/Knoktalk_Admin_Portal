@@ -1,0 +1,44 @@
+10-09-2020 21:14:25.141 [restartedMain] INFO  c.v.k.KnoktalkAdminPortalApplication.logStarting - Starting KnoktalkAdminPortalApplication on Vish with PID 10056 (E:\Knoktalk_Backend\knoktalk_portal_backend\target\classes started by vk458 in E:\Knoktalk_Backend\knoktalk_portal_backend)
+10-09-2020 21:14:25.150 [restartedMain] INFO  c.v.k.KnoktalkAdminPortalApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+10-09-2020 21:14:25.757 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10-09-2020 21:14:25.758 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10-09-2020 21:14:32.525 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+10-09-2020 21:14:32.652 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 57ms. Found 0 JPA repository interfaces.
+10-09-2020 21:14:33.725 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7faddc86' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10-09-2020 21:14:33.750 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10-09-2020 21:14:35.279 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+10-09-2020 21:14:35.340 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+10-09-2020 21:14:35.342 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.37]
+10-09-2020 21:14:35.633 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+10-09-2020 21:14:35.634 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 9869 ms
+10-09-2020 21:14:36.559 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+10-09-2020 21:14:36.852 [task-1] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+10-09-2020 21:14:37.344 [task-1] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.20.Final
+10-09-2020 21:14:38.096 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10-09-2020 21:14:39.019 [task-1] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+10-09-2020 21:14:40.124 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+10-09-2020 21:14:40.779 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30099d78, org.springframework.security.web.context.SecurityContextPersistenceFilter@64a9cb30, org.springframework.security.web.header.HeaderWriterFilter@5814c106, org.springframework.web.filter.CorsFilter@6af5eebd, org.springframework.security.web.authentication.logout.LogoutFilter@4bab606c, com.vetologic.ktap.jwt_security_config.controller.JwtRequestFilter@3e9866c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1af8e5e5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4418f116, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12c8aca2, org.springframework.security.web.session.SessionManagementFilter@72fdde71, org.springframework.security.web.access.ExceptionTranslationFilter@28eee0aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c6a284e]
+10-09-2020 21:14:40.803 [task-1] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+10-09-2020 21:14:41.004 [task-1] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+10-09-2020 21:14:41.846 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+10-09-2020 21:14:42.100 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+10-09-2020 21:14:42.105 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Triggering deferred initialization of Spring Data repositories…
+10-09-2020 21:14:42.106 [restartedMain] INFO  o.s.d.r.c.DeferredRepositoryInitializationListener.onApplicationEvent - Spring Data repositories initialized!
+10-09-2020 21:14:42.127 [restartedMain] INFO  c.v.k.KnoktalkAdminPortalApplication.logStarted - Started KnoktalkAdminPortalApplication in 19.192 seconds (JVM running for 23.081)
+10-09-2020 21:14:46.177 [task-1] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10-09-2020 21:14:46.217 [task-1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-09-2020 21:16:08.214 [http-nio-8080-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10-09-2020 21:16:08.214 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+10-09-2020 21:16:08.228 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 13 ms
+10-09-2020 21:16:08.690 [http-nio-8080-exec-2] INFO  c.v.k.j.controller.JwtRequestFilter.doFilterInternal - JWT Token will be generated
+10-09-2020 21:16:08.690 [http-nio-8080-exec-4] INFO  c.v.k.j.controller.JwtRequestFilter.doFilterInternal - JWT Token will be generated
+10-09-2020 21:16:08.690 [http-nio-8080-exec-1] INFO  c.v.k.j.controller.JwtRequestFilter.doFilterInternal - JWT Token will be generated
+10-09-2020 21:16:08.691 [http-nio-8080-exec-3] INFO  c.v.k.j.controller.JwtRequestFilter.doFilterInternal - JWT Token will be generated
+10-09-2020 21:16:13.787 [http-nio-8080-exec-6] INFO  c.v.k.j.controller.JwtRequestFilter.doFilterInternal - JWT Token will be generated
+10-09-2020 21:16:15.355 [http-nio-8080-exec-6] INFO  c.v.k.j.c.JwtAuthenticationController.createAuthenticationToken - JWT Token generated successfully.
+10-09-2020 21:16:15.356 [http-nio-8080-exec-6] INFO  c.v.k.j.c.JwtAuthenticationController.createAuthenticationToken - admin@knoktalk.com Logged successfully.
+10-09-2020 21:16:15.533 [http-nio-8080-exec-9] INFO  c.v.k.controller.home.HomeController.home - Hi, admin@knoktalk.com! Welcome, to KnokTalk Admin Portal Home Controller..
+10-09-2020 21:16:15.552 [http-nio-8080-exec-5] INFO  c.v.ktap.beans.videos.VideosBean.getAllVideosDetails - Videos List is Empty
+10-09-2020 21:16:28.490 [http-nio-8080-exec-8] INFO  c.v.ktap.beans.videos.VideosBean.getAllVideosDetails - Videos List is Empty
+10-09-2020 21:16:37.938 [http-nio-8080-exec-5] INFO  c.v.k.c.users.UsersController.blockUser - This User Id: 1 Blocked Sucessfully
+10-09-2020 21:16:41.983 [http-nio-8080-exec-3] INFO  c.v.k.c.users.UsersController.unBlockUser - This User Id: 1 UnBlocked Sucessfully

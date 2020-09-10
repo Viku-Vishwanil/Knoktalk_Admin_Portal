@@ -1,0 +1,17 @@
+<!-- 
+File Name :-progress.component.html	   	Created Date :-05-09-2020     Created By :- Vikash Kumar (Emp. Id : VTPL/BLR/005)
+	
+Description :- This Component is Used to Display the Progress Bar While Uploading the File.	
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+<p class="size">{{progress}} %</p>
+<div class="progress-cont" *ngIf="progress">
+    <div class="progress" [ngStyle]="{'width': progress + '%'}">
+    </div>
+  </div>
+

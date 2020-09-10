@@ -1,0 +1,65 @@
+<!-- 
+  File Name :- AllVideos.html	            Created Date :-29-08-2020           Created By :- Rambabu (Emp. Id : VTPL/BLR/0013)			
+
+  Description :- This component is responsible to display the All Videos
+
+===============================================================================================================================
+  Sl.No			    Description			                          Modified By		    	                        Modified Date	
+===============================================================================================================================
+
+-->
+
+
+<h4 class="green">ALL Videos</h4>
+<table id="paginationSimpleNumbers" class="display" style="width:100%">
+  <thead class="orange">
+    <tr>
+      <th class="th-sm">ID
+      </th>
+      <th class="th-sm">Play Priview
+      </th>
+      <th class="th-sm">UserName
+      </th>
+      <th class="th-sm">Sound Name
+      </th>
+      <th class="th-sm">Discovery Section
+      </th>
+      <th class="th-sm">Created
+      </th>
+      <th class="th-sm">Action
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of videoList ; let i = index;">
+      <td>{{i+1}}</td>
+      <td></td>
+      <td>{{list.userBean.firstName}}</td>
+      <td>{{list.soundBean.soundName}}</td>
+      <td>{{list.discoverSectionBean.sectionName}}</td>
+      <td>{{list.createdDate}}</td>
+      <td>
+        <mat-icon color="accent" class="add-btn" title="Add To Discovery" (click)="openDialog(list)">add</mat-icon>
+        <mat-icon color="warn" class="delete-btn" title="Delete" (click)="routeToDeleteVideo(list)">delete_forever
+        </mat-icon>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot class="orange">
+    <tr>
+      <th class="th-sm">ID
+      </th>
+      <th class="th-sm">Play Priview
+      </th>
+      <th class="th-sm">UserName
+      </th>
+      <th class="th-sm">Sound Name
+      </th>
+      <th class="th-sm">Discovery Section
+      </th>
+      <th class="th-sm">Created
+      </th>
+      <th class="th-sm">Action
+      </th>
+  </tfoot>
+</table>

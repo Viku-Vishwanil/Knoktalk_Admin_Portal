@@ -1,0 +1,76 @@
+<!-- 
+File Name :-listusers.component.html	   	Created Date :-31-08-2020     Created By :- Faiser I (Emp. Id : VTPL/BLR/006)
+	
+Description :- this component is used to block, unblock and add or substract of gifts/coins of users					
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+
+<h3 class="green">ALL Users</h3>
+<table id="paginationSimpleNumbers" class="display text-center" style="width:100%">
+    <thead class="orange">
+        <tr>
+            <th class="th-sm">Sl No
+            </th>
+            <th class="th-sm">KnokTalk ID
+            </th>
+            <th class="th-sm">First Name
+            </th>
+            <th class="th-sm">Last Name
+            </th>
+            <!-- <th class="th-sm">Device
+            </th> -->
+            <th class="th-sm">Created Date
+            </th>
+            <th class="th-sm">Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usersList ; let i = index;" [style.color]="isBlocked(user.block) ? 'black' : 'red'">
+            <td>{{i+1}}</td>
+            <td>{{user.knoktalkId}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <!-- <td>{{user.device}}</td> -->
+            <td>{{user.createdDate}}</td>
+            <td class="text-center">
+                <mat-icon color='warn' matTooltip="Block" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="edit-btn" *ngIf='user.block==0' (click)='blockUser(user)'>block</mat-icon>
+                <mat-icon color='accent' matTooltip="UnBlock" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="edit-btn" *ngIf='user.block==1' (click)='unblockUser(user)'>360</mat-icon>
+                <mat-icon color='warn' matTooltip="Delete" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="edit-btn" (click)='deleteUser(user)'>delete_forever</mat-icon>
+                <mat-icon color='warn' matTooltip="Gift/Coin" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="delete-btn" (click)='openDialog(user)'>card_giftcard
+                </mat-icon>
+                <mat-icon color='primary' matTooltip="Device" [matTooltipPosition]="'below'" matTooltipHideDelay="500"
+                    class="delete-btn" (click)='openDevice(user)'>phone_android
+                </mat-icon>
+            </td>
+        </tr>
+
+    </tbody>
+    <tfoot class="orange">
+        <tr>
+            <th class="th-sm">Sl No
+            </th>
+            <th class="th-sm">KnokTalk ID
+            </th>
+            <th class="th-sm">First Name
+            </th>
+            <th class="th-sm">Last Name
+            </th>
+            <!-- <th class="th-sm">Device
+            </th> -->
+            <th class="th-sm">Created Date
+            </th>
+            <th class="th-sm">Action
+            </th>
+        </tr>
+    </tfoot>
+</table>

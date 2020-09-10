@@ -1,0 +1,36 @@
+<!-- 
+File Name :-editsection.html	   	Created Date :-02-09-2020     Created By :- Vikash Kumar (Emp. Id : VTPL/BLR/005)
+	
+Description :- This Component is Used to Display the Edit Section Form			
+	
+============================================================================================================================
+  Sl.No			    Description			                                Modified By		              	      Modified Date	
+============================================================================================================================
+	
+	
+ -->
+<mat-icon matSuffix class="cross" (click)='close()'>clear</mat-icon>
+<h5 mat-dialog-title class="dialog-title">Update Sound Section</h5>
+<form [formGroup]="addSection" class="form-group" (submit)="updateSectionDetails()">
+  <div mat-dialog-content>
+    <p class="dialog-text"></p>
+    <mat-form-field class="login-full-width">
+      <mat-label>Section Name <mat-hint class="text-danger">*</mat-hint>
+      </mat-label>
+      <input matInput type="text" formControlName="sectionName" [errorStateMatcher]="matcher" required>
+      <mat-error
+        *ngIf="addSection.get('sectionName').hasError('sectionName') && addSection.get('sectionName').touched && !addSection.get('sectionName').hasError('sectionName')">
+        Please Enter Section Name.
+      </mat-error>
+      <mat-error *ngIf="addSection.get('sectionName').hasError('reqiured') && addSection.get('sectionName').touched">
+        Section Name Reqiured.
+      </mat-error>
+      <!-- <mat-icon matSuffix>email</mat-icon> -->
+    </mat-form-field>
+    <!-- <p style="color : red" *ngIf='emailError'>{{sectionError}}</p> -->
+  </div>
+  <div mat-dialog-actions>
+    <button class="btn btn-sm btn-danger btn-block text-uppercase" type="submit"
+      [disabled]='addSection.invalid'>Update</button>
+  </div>
+</form>
